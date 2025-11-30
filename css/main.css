@@ -1400,4 +1400,9 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 
+.header__socials img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
 /*# sourceMappingURL=maps/main.css.map */
