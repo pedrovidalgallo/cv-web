@@ -1405,4 +1405,141 @@ body::-webkit-scrollbar-thumb {
   height: 20px;
   display: block;
 }
+
+/* Ajustes específicos para los números de la home en mobile */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+  /* Un poco más de aire y mejor distribución */
+  .home__numbers {
+    margin-top: 4vw;
+    row-gap: 4vw;           /* espacio vertical entre filas */
+  }
+
+  /* Que cada bloque tenga ancho flexible y no se vea tan pesado */
+  .home__number {
+    width: auto;
+    flex: 1 1 33%;          /* aprox. tres columnas responsivas */
+  }
+
+  /* NÚMERO más chico */
+  .home__number-digital {
+    font-size: 8vw;         /* antes 13.33vw */
+    line-height: 1.1;
+  }
+
+  /* Texto más chico y más cerca del número */
+  .home__number-text {
+    margin-left: 3vw;       /* antes 5.33vw */
+  }
+
+  .home__number-text.small {
+    font-size: 2.3vw;       /* override del 4vw de .small en mobile */
+  }
+}
+
+/* ==============================
+   AJUSTE DE TÍTULOS EN MOBILE
+   (Marketing, Habilidades, Testimonios, etc.)
+================================ */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+  /* Contenedor del título sticky */
+  .page-title,
+  .sticky-title {
+    height: 10vw;              /* antes 13.33vw */
+  }
+
+  /* Lista rotada / barra de títulos */
+  .page-title ul,
+  .sticky-title ul {
+    font-size: 3.6vw;         /* antes 5.33vw */
+  }
+
+  /* Cada item del título */
+  .page-title ul li,
+  .sticky-title ul li {
+    padding: 0 3.5vw;         /* menos aire lateral */
+  }
+
+  /* Texto del título */
+  .page-title .title,
+  .sticky-title .title {
+    font-size: 3.6vw;
+  }
+
+  /* Número (1.0, 2.0, 3.0, etc.) */
+  .page-title .number,
+  .sticky-title .number {
+    font-size: 3.2vw;
+  }
+
+/* ==============================
+   HOME – CTA WHATSAPP SOLO TEXTO (MOBILE)
+   ============================== */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+  .home__circles {
+    position: relative;
+    height: auto;
+    padding-top: 8vw;
+    padding-bottom: 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home__circles-lines {
+    display: none;
+  }
+
+  .home__circle {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+
+  /* Foto centrada */
+  .home__circle--left {
+    margin: 0 auto;
+  }
+
+  /* CTA debajo, SIN forma de botón */
+  .home__circle--right {
+    width: auto;
+    height: auto;
+    margin-top: 6vw;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .home__circle-text {
+    font-size: 4vw;
+    line-height: 1.3;
+    text-align: center;
+    background: none;
+  }
+
+  /* Link como TEXTO puro */
+  .home__circle-text a {
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-decoration: underline;
+  }
+
+  .home__circle-text a span {
+    text-decoration: none;
+  }
+
+  /* Sin hover blanco, sin cambios de fondo */
+  .home__circle-text a:hover {
+    background: transparent !important;
+    color: #B66449;
+    text-decoration: underline;
+  }
+}
+
 /*# sourceMappingURL=maps/main.css.map */
