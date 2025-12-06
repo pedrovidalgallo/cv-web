@@ -490,67 +490,84 @@
                     <div class="h1">CONTACTAME</div>
                     <div class="small"></div>
                   </div>
+
                   <ul class="content__menu contacts__menu">
-                  <li class="active"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedrovidalgallo@gmail.com" target="_blank">MAIL: PEDROVIDALGALLO@GMAIL.COM</a></li>
+                    <li class="active"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedrovidalgallo@gmail.com" target="_blank">MAIL: PEDROVIDALGALLO@GMAIL.COM</a></li>
                     <li class="active"><a class="noicon" href="https://www.linkedin.com/in/pedro-vidal-gallo/" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
                     <li class="active"><a href="https://wa.me/5491123965914" target="_blank">WHATSAPP</a></li>
                     <li class="active"><a class="noicon" href="https://www.instagram.com/pedvidall/" target="_blank">INSTAGRAM</a></li>
                   </ul>
-                  <div class="contacts__copyright small">© Powered by <a href="https://www.linkedin.com/in/pedro-vidal-gallo/" target="_blank" rel="noopener"><i>Pedro Vidal</i></a></div>
+
+                  <div class="contacts__copyright small">
+                    © Powered by <a href="https://www.linkedin.com/in/pedro-vidal-gallo/" target="_blank" rel="noopener"><i>Pedro Vidal</i></a>
+                  </div>
                 </div>
+
                 <div class="content__right">
                   <div class="content__subtitle">Agendemos un meet y <span>conversemos.</span></div>
-                  <form class="content__contacts contacts__form js-contact-form" method="post">
+
+                  <!-- FORMULARIO REAL (solo este) -->
+                  <form class="content__contacts contacts__form js-contact-form"
+                        method="POST"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field"
+                        name="contacto"
+                        enctype="multipart/form-data">
+
+                    <!-- Necesario para Netlify -->
+                    <input type="hidden" name="form-name" value="contacto">
+
+                    <!-- Honeypot anti-spam -->
+                    <input type="hidden" name="bot-field">
+
                     <div class="content__brief">
                       <div class="content__brief-title">
                         <label class="input-file">
-                          <input type="file" name="file" id="brief"><span>ENVIAR MATERIAL</span>
+                          <input type="file" name="file" id="brief">
+                          <span>ENVIAR MATERIAL</span>
                         </label>
                       </div>
-                      <div class="content__brief-text small">Podés subir un brief, una presentación comercial, un roadmap o cualquier archivo que creas conveniente. <label for="brief">MATERIAL  </label></div>
+
+                      <div class="content__brief-text small">
+                        Podés subir un brief, una presentación comercial, un roadmap o cualquier archivo que creas conveniente.
+                        <label for="brief">MATERIAL</label>
+                      </div>
                     </div>
-                    <form class="content__contacts contacts__form js-contact-form"
-                          method="POST"
-                          data-netlify="true"
-                          name="contacto">
 
-                      <input type="hidden" name="form-name" value="contacto">
+                    <div class="content__form">
 
-                      <div class="content__form">
+                      <label class="content__form-input">
+                        <input type="text" name="name" required>
+                        <span class="content__form-placeholder">NOMBRE *</span>
+                      </label>
 
-                        <label class="content__form-input">
-                          <input type="text" name="name" required>
-                          <span class="content__form-placeholder">NOMBRE *</span>
-                        </label>
+                      <label class="content__form-input">
+                        <input type="email" name="email" required>
+                        <span class="content__form-placeholder">EMAIL *</span>
+                      </label>
 
-                        <label class="content__form-input">
-                          <input type="email" name="email" required>
-                          <span class="content__form-placeholder">EMAIL *</span>
-                        </label>
+                      <label class="content__form-input">
+                        <input type="text" name="msg" required minlength="10">
+                        <span class="content__form-placeholder">MENSAJE *</span>
+                      </label>
 
-                        <label class="content__form-input">
-                          <input type="text" name="msg" required minlength="10">
-                          <span class="content__form-placeholder">MENSAJE *</span>
-                        </label>
-
-                        <!-- Honeypot (más prolijo) -->
-                        <input type="hidden" name="website">
-
-                        <div class="content__form-btn">
-                          <button class="btn btn--arrow" type="submit">
-                            <svg><use xlink:href="./svg/sprite.svg#arrow"></use></svg>
-                          </button>
-                        </div>
-
+                      <div class="content__form-btn">
+                        <button class="btn btn--arrow" type="submit">
+                          <svg><use xlink:href="./svg/sprite.svg#arrow"></use></svg>
+                        </button>
                       </div>
-                    </form>
+
+                    </div>
+                  </form>
+
                 </div>
               </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script src="js/main.js"></script>
-  </body>
-</html>
+              </section>
+              </div>
+              </div>
+              </div>
+              </main>
+
+              <script src="js/main.js"></script>
+              </body>
+              </html>
