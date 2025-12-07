@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mensaje recibido - Pedro Vidal">
+    <title>Gracias por tu mensaje - Pedro Vidal</title>
+    
+    <!-- Agregando favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Actualizado background con degradado lateral igual al sitio principal */
+        body {
+            background: linear-gradient(to right, #241f1f 0%, #241f1f 32%, #4a4746 100%);
+            color: #e1dedc;
+            font-family: "Inter", "Inter Tight", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        /* Agregando estilos para el canvas de ruido */
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.12;
+            mix-blend-mode: overlay;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.4s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-family: "Inter Tight", sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            color: #e1dedc;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: #e1dedc;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.6rem;
+            color: #e1dedc;
+            text-decoration: none;
+            border: 1px solid #b66449;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #b66449;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                margin-bottom: 0.75rem;
+            }
+
+            p {
+                margin-bottom: 2rem;
+            }
+
+            .btn {
+                padding: 0.7rem 1.4rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Canvas para el efecto de ruido visual -->
+    <canvas id="noise" class="noise" aria-hidden="true"></canvas>
+    
+    <div class="container">
+        <h1>¡Gracias por tu mensaje!</h1>
+        <p>Te responderé a la brevedad.</p>
+        <a href="/" class="btn">Volver al inicio</a>
+    </div>
+    
+    <!-- Script para generar el ruido -->
+     <canvas id="noise-canvas"></canvas>
+    <script src="./js/noise.js"></script>
+</body>
+</html>
