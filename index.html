@@ -524,6 +524,7 @@
                   <form class="content__contacts contacts__form js-contact-form"
                         method="POST"
                         data-netlify="true"
+                        data-netlify-recaptcha="true"
                         netlify-honeypot="bot-field"
                         name="contacto"
                         enctype="multipart/form-data">
@@ -565,6 +566,8 @@
                         <span class="content__form-placeholder">MENSAJE *</span>
                       </label>
 
+                      <div data-netlify-recaptcha="true"></div>
+                      
                       <div class="content__form-btn">
                         <button class="btn btn--arrow" type="submit">
                           <svg><use xlink:href="./svg/sprite.svg#arrow"></use></svg>
